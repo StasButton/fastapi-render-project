@@ -1,0 +1,15 @@
+databases:
+  - name: fp_db
+    plan: free # или starter/standard
+
+services:
+  - type: web
+    name: fastapi-backend
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: fp_db
+          property: connectionString # Это магическая строка: Render сам подставит Internal URL

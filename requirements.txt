@@ -1,0 +1,5 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+asyncpg  # асинхронный драйвер для PostgreSQL
+alembic  # для миграций (опционально, но рекомендуется)
