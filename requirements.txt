@@ -1,5 +1,5 @@
 fastapi
 uvicorn[standard]
-sqlalchemy[asyncio]
-asyncpg  # асинхронный драйвер для PostgreSQL
-alembic  # для миграций (опционально, но рекомендуется)
+sqlalchemy>=2.0
+asyncpg
+alembic
