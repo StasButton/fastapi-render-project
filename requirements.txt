@@ -1,5 +1,5 @@
 fastapi
 uvicorn[standard]
-sqlalchemy[asyncio]
+sqlalchemy[asyncio]==2.1.3 
 asyncpg
 alembic
